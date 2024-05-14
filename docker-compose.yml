@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/web:/root/app
+  db:
+    image: postgres:latest
+    ports:
+      - "6379:6379"
